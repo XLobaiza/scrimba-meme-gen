@@ -22,10 +22,10 @@
   padding-left: 10px;
 }
 
-.form {
+.form{
   padding: 0px 67px;
 }
-.form--user {
+.form--user{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
