@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to left, #A626D3,#672280);
+  color: white;
+  height: 75px;
+  padding: 10px;
+}
+.navbar > p {
+  font-weight: 300;
+}
+
+.navbar-logo{
+  display: flex;
+}
+.navbar-logo > h4 {
+  padding-left: 10px;
+}
