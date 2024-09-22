@@ -9,7 +9,7 @@
   background: linear-gradient(to left, #A626D3,#672280);
   color: white;
   height: 75px;
-  padding: 10px;
+  padding: 10px 67px;
 }
 .navbar > p {
   font-weight: 300;
@@ -20,4 +20,45 @@
 }
 .navbar-logo > h4 {
   padding-left: 10px;
+}
+
+.form {
+  padding: 0px 67px;
+}
+.form--user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+.form---input{
+  display: flex;
+  flex-direction: column; 
+  width: 48%;
+  margin: 15px 0px;
+}
+.form---input > label {
+  font-size: 14px;
+   color: #374151;
+   padding-bottom: 4px;
+}
+.form---input > input{
+  padding: 10px;
+  border-radius: 6px;
+  border-style: none;
+  border: 0.819px solid #D1D5DB;
+}
+.form---button {
+  width: 100%;
+  border-style: none;
+  height: 50px;
+  cursor: pointer;
+  background: linear-gradient(to left, #A626D3,#672280);
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+}
+.form > img {
+  width: 100%;
+  padding-top: 32px;
 }
