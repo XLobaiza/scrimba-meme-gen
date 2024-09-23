@@ -13,6 +13,7 @@ export default function Meme(){
                     <input id="bottom" type="text" placeholder="And take my money"></input>
                 </div>
             </div>
+            <p>hola</p>
             <button id="sumbit" className="form---button">Get a new meme image  🖼</button>
         <img src="src/assets/memeimg.png"/>
         </form>
