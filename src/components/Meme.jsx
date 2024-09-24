@@ -4,7 +4,11 @@ import memesData from "../memesData.jsx"
 export default function Meme(){
 
     function handleClick(){
-        console.log(memesData.data.memes[Math.floor(Math.random() * 100) + 1].url)
+
+        const memesArray = memesData.data.memes
+        const randomNumber = Math.floor(Math.random() * memesArray.length)
+        const memeURL = memesArray[randomNumber].url
+        console.log(memeURL)
     }
 
     return(
