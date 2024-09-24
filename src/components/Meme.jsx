@@ -1,6 +1,12 @@
 import React from "react";
+import memesData from "../memesData.jsx"
 
 export default function Meme(){
+
+    function handleClick(){
+        console.log(memesData.data.memes[Math.floor(Math.random() * 100) + 1].url)
+    }
+
     return(
         <div className="form">
             <div className="form--user">
@@ -13,7 +19,7 @@ export default function Meme(){
                     <input id="bottom" type="text" placeholder="And take my money"></input>
                 </div>
             </div>
-            <button id="sumbit" className="form---button">Get a new meme image  🖼</button>
+            <button onClick={handleClick} className="form---button">Get a new meme image  🖼</button>
         {/* <img src="src/assets/memeimg.png"/> */}
         </div>
     )
