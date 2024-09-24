@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Meme(){
     return(
-        <form className="form">
+        <div className="form">
             <div className="form--user">
                 <div className="form---input">
                     <label for="text" >Top text</label>
@@ -13,9 +13,8 @@ export default function Meme(){
                     <input id="bottom" type="text" placeholder="And take my money"></input>
                 </div>
             </div>
-            <p>hola</p>
             <button id="sumbit" className="form---button">Get a new meme image  🖼</button>
-        <img src="src/assets/memeimg.png"/>
-        </form>
+        {/* <img src="src/assets/memeimg.png"/> */}
+        </div>
     )
 }
