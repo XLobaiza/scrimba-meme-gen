@@ -8,32 +8,31 @@ export default function Meme(){
         bottomText: "",
         randomImage: "http://i.imgflip.com/1bij.jpg"
     })
-
-    function handleChange(event){
-    const {name, value} = event.target
-        setMeme(prevMeme => ({
-            ...prevMeme,
-            [name]: value
-        }))
-    }
-
-    const [allMemeImages, setAllMemeImages] = React.useState(memesData)
+  
+    const [allMemeImages, setAllMemeImages] = React.useState([])
 
    React.useEffect(()=>{
-    fetch('https://api.imgflip.com/get_memes')
-    .then(response => response.json())
-    .then(data => allMemeImages)
-   },[])
+        fetch('https://api.imgflip.com/get_memes')
+        .then(response => response.json())
+        .then(data => setAllMemeImages(data.data.memes))
+   }, [])
+   
 
     function getMemeImage(){
-
-        const memesArray = allMemeImages.data.memes
-        const randomNumber = Math.floor(Math.random() * memesArray.length)
-        const url = memesArray[randomNumber].url
+        const randomNumber = Math.floor(Math.random() * allMemeImages.length)
+        const url = allMemeImages[randomNumber].url
         setMeme(prevMeme => ({
             ...prevMeme, randomImage: url
         }))
     }
+    function handleChange(event){
+        const {name, value} = event.target
+            setMeme(prevMeme => ({
+                ...prevMeme,
+                [name]: value
+            }))
+        }
+
 
     return(
         <div className="form">
