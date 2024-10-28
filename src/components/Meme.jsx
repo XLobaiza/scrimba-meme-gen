@@ -32,7 +32,6 @@ export default function Meme(){
             }))
         }
 
-
     return(
         <div className="form">
             <div className="form--user">
